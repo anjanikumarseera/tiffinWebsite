@@ -13,19 +13,16 @@
     <div class="container"> 
         <div class="navbar">
         <div class="logo">
-            <img src="logo.png" width="125px">
+            <img src="https://siddhivinayakfoods.com/wp-content/uploads/2023/03/Siddhivinayak-Biscuit-Logo-1024x693.png" width="150px">
+
         </div>
         <nav>
             <ul id="MenuItems">
-                <li><a href="shoppinghtml.html">Home</a></li>
-                <li><a href="all products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="fanzone.html">Fan Zone</a></li>
-                <li><a href="accounts.html">Account</a></li>
+                <h1>Welcome to Sri Siddhi Vinayaka Tiffin Services!!</h1>
 
             </ul>
         </nav>
-        <a href="CARTT.html"><img src="cart.png" width="30px" height="30px"></a>
+        
         <img src="menu.png" class="menu-icon" onclick="menutoggle()">
     </div>
 </div>
@@ -34,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-1">
-                <img src="image1.png" width="100%">
+                <img src="https://media.istockphoto.com/id/1292563627/photo/assorted-south-indian-breakfast-foods-on-wooden-background-ghee-dosa-uttappam-medhu-vada.jpg?s=612x612&w=0&k=20&c=HvuYT3RiWj5YsvP2_pJrSWIcZUXhnTKqjKhdN3j_SgY=" width="100%">
             </div>
             <div class="col-1">
                 <div class="form-container">
@@ -78,7 +75,8 @@
                 </div>
             </div>
             <div class="footer-col-2">
-                <img src="logo-white.png">
+                <img src="https://siddhivinayakfoods.com/wp-content/uploads/2023/03/Siddhivinayak-Biscuit-Logo-1024x693.png" width="150px">
+
                 <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Comfortable Accesible to the Many.</p>
             </div>
              <div class="footer-col-3">
@@ -121,6 +119,85 @@
         }
         
     }
+    var LoginForm = document.getElementById("LoginForm");
+    var regform = document.getElementById("regform");
+    var Indicator = document.getElementById("Indicator");
+    var forgotPasswordLink = document.querySelector('#LoginForm a');
+
+    function register() {
+        regform.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+
+    function login() {
+        regform.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+    LoginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Get username and password values
+        var username = this.querySelector('input[type="text"]').value;
+        var password = this.querySelector('input[type="password"]').value;
+        
+        // Check if username or password is empty
+        if (!username || !password) {
+            alert("Please fill out all fields.");
+            return; // Stop form submission
+        }
+        
+        // Here you would typically send the username and password to the server for authentication
+        // For now, let's just log them to the console
+        console.log("Login clicked");
+        console.log("Username:", username);
+        console.log("Password:", password);
+
+        // Redirect to shopping page
+        window.location.href = "shoppinghtml.html";
+    });
+
+    regform.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Get username, email, and password values
+        var username = this.querySelector('input[type="text"]').value;
+        var email = this.querySelector('input[type="email"]').value;
+        var password = this.querySelector('input[type="password"]').value;
+        
+        // Check if any field is empty
+        if (!username || !email || !password) {
+            alert("Please fill out all fields.");
+            return; // Stop form submission
+        }
+        
+        // Check email format
+        var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!email.match(emailFormat)) {
+            alert("Please enter a valid email address.");
+            return; // Stop form submission
+        }
+        
+        // Here you would typically send the registration data to the server
+        // For now, let's just log them to the console
+        console.log("Register clicked");
+        console.log("Username:", username);
+        console.log("Email:", email);
+        console.log("Password:", password);
+
+        // Redirect to shopping page
+        window.location.href = "shoppinghtml.html";
+    });
+
+    // Add event listener to "Forgot password?" link
+    forgotPasswordLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        
+        // Show notification
+        alert("Password reset link has been sent to your email.");
+    });
   </script>
  <!-----js for toggle form------>
     <script>
