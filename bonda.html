@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Cozystore</title>
+    <link rel="stylesheet" href="shopping.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container"> 
+        <div class="navbar">
+        <div class="logo">
+            <img src="https://siddhivinayakfoods.com/wp-content/uploads/2023/03/Siddhivinayak-Biscuit-Logo-1024x693.png" width="150px">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="shoppinghtml.html">Home</a></li>
+                <li><a href="all products.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+        </nav>
+       
+        <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+<!------single product details------>
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-1">
+            <img src="https://i0.wp.com/curryandvanilla.com/wp-content/uploads/2021/05/cheesy-bread-bondas-1b.jpg?fit=756%2C1008&ssl=1" height="420" width="400" id="ProductImg">
+
+
+
+
+        </div>
+        <div class="col-1">
+            <p>Home / bonda</p>
+            <h1>Fluffy Mysore Bonda</h1>
+            <h4>₹40</h4>
+            
+            <a href="https://cosmofeed.com/vp/661ab2422ab6e800133bce8f" class="btn">Order Now</a>
+            
+            <br>
+            <p>Indulge in the irresistible charm of Mysore Bonda, a savory delight that captivates the senses with its golden-brown hue and tantalizing aroma. Imagine biting into a crispy exterior that gives way to a soft, pillowy center, bursting with the flavors of cumin, ginger, and green chilies.
+            </p>
+        </div>
+    </div>
+</div>
+ <br><br><br><br>
+
+<!------footer------>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone. </p>
+                <div class="app-logo">
+                    <img src="play-store.png">
+                    <img src="app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="https://siddhivinayakfoods.com/wp-content/uploads/2023/03/Siddhivinayak-Biscuit-Logo-1024x693.png" width="150px">
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Comfortable Accesible to the Many.</p>
+            </div>
+             <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copy right - REDSTORE</p>
+    </div>
+  </div>
+
+  <!-----js for toggle menu------>
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle(){
+        if( MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px"; 
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+        
+    }
+  </script>
+<!------js for product gallery------>
+<script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+
+    SmallImg[0].onclick = function(){
+        ProductImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function(){
+        ProductImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function(){
+        ProductImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function(){
+        ProductImg.src = SmallImg[3].src;
+    }
+</script>
+</body>
+</html> 
