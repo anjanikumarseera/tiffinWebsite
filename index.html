@@ -23,7 +23,7 @@
             </ul>
         </nav>
         
-       
+        
     </div>
 </div>
 <!---------accountpage------>
@@ -148,6 +148,12 @@
             alert("Please fill out all fields.");
             return; // Stop form submission
         }
+        // Password validation
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!password.match(passwordRegex)) {
+            alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one special character.");
+            return; // Stop form submission
+        }
         
         // Here you would typically send the username and password to the server for authentication
         // For now, let's just log them to the console
@@ -173,6 +179,12 @@
             return; // Stop form submission
         }
         
+        // Password validation
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!password.match(passwordRegex)) {
+            alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one special character.");
+            return; // Stop form submission
+        }
         // Check email format
         var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (!email.match(emailFormat)) {
